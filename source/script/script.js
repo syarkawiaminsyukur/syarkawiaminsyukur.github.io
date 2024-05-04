@@ -3,6 +3,7 @@ const form = document.forms["contact-form"];
 const btnKirim = document.querySelector(".btn-kirim");
 const btnLoading = document.querySelector(".btn-loading");
 const myAlert = document.querySelector(".my-alert");
+const alertGagal = document.querySelector(".alert-gagal");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -21,5 +22,11 @@ form.addEventListener("submit", (e) => {
       // reset form
       form.reset();
     })
-    .catch((error) => console.error("Error!", error.message));
+    .catch((error) => {
+      console.error("Error!", error.message);
+      // tampilkan pesan gagal
+      alertGagal.classList.toggle("d-none");
+      btnLoading.classList.toggle("d-none");
+      btnKirim.classList.toggle("d-none");
+    });
 });
