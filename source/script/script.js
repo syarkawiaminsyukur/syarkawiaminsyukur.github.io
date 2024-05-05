@@ -1,3 +1,13 @@
+const galleryImage = document.querySelectorAll(".gallery-img");
+
+galleryImage.forEach((img, i) => {
+  img.dataset.aos = "fade-down";
+  img.dataset.aosDelay = i * 100;
+  img.dataset.aosDuration = 1000;
+});
+
+AOS.init({});
+
 const scriptURL = "https://script.google.com/macros/s/AKfycbzcMNE5GicoWo--3xJL5GAzEyWm1NVmj0w0X8DyyfYMOnvqPJoax7MiCvan1jv1P7Tn/exec";
 const form = document.forms["contact-form"];
 const btnKirim = document.querySelector(".btn-kirim");
@@ -30,3 +40,9 @@ form.addEventListener("submit", (e) => {
       btnKirim.classList.toggle("d-none");
     });
 });
+
+gsap.from(".jumbotron img", { duration: 1, rotateY: 360, opacity: 0 });
+gsap.from(".navbar", { duration: 1.5, y: "-100%", opacity: 0, ease: "bounce" });
+gsap.from(".hi-there", { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: "back" });
+gsap.registerPlugin(TextPlugin);
+gsap.to(".welcome", { duration: 2, delay: 1, text: "Welcome to My Portfolio" });

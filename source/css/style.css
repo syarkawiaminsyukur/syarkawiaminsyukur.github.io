@@ -1,10 +1,12 @@
 .jumbotron {
   padding-top: 6rem;
   background-color: #eee;
+  margin-bottom: 10rem;
 }
 
 .jumbotron img {
   width: 150px;
+  width: 200px;
 }
 
 .row .col h1,
@@ -28,4 +30,12 @@ footer {
 
 .navbar.navbar-expand-lg {
   background-color: white;
+}
+
+.gallery-img {
+  width: 100%;
+}
+
+#gallery .row > * {
+  padding: 0;
 }
