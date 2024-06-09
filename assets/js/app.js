@@ -7,7 +7,7 @@ document.addEventListener("alpine:init", () => {
       { id: 4, name: "Bookshelf app", img: "project4.png", url: "https://syarkawiaminsyukur.github.io/Bookshelf-app/" },
       { id: 5, name: "wedding invitation", img: "project5.png", url: "https://syarkawiaminsyukur.github.io/wedding-invitation/" },
       { id: 6, name: "CoffeShop Website", img: "project6.png", url: "https://syarkawiaminsyukur.github.io/cerita-kopi/" },
-      { id: 7, name: "Travel Website", img: "project7.png" },
+      { id: 7, name: "Lidia | Digital Library", img: "project7.png", url: "https://syarkawiaminsyukur.github.io/Lidia-Digital-Library/" },
     ],
   }));
 });
