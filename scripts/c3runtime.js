@@ -1382,13 +1382,13 @@ function or(l, r)
 }
 
 self.C3_ExpressionFuncs = [
-		() => -20,
-		() => 0,
-		() => "",
+		() => "AppVersion",
 		() => "Perkenalan Cerita",
 		() => "AvatarPilihan",
 		() => "NamaUser",
 		() => "🔍 ES1: Cek Avatar & Nama",
+		() => 0,
+		() => "",
 		() => 0.56,
 		() => 0.1,
 		() => 0.5781,
@@ -1404,6 +1404,12 @@ self.C3_ExpressionFuncs = [
 		() => "✅ ES1: Nama ditemukan",
 		() => "Navigation_Hub",
 		() => "🎯 ES1: Profil lengkap → HUB",
+		() => "🧹 Reset data lama (first online release",
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0();
+		},
+		() => "🧹 Reset data lama (version update)",
 		() => 141,
 		() => 394,
 		() => 50,
@@ -1563,10 +1569,6 @@ self.C3_ExpressionFuncs = [
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => and("✅ AvatarPilihan dari Get: ", v0.GetValue());
-		},
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0();
 		},
 		p => {
 			const v0 = p._GetNode(0).GetVar();
